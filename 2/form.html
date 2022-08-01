@@ -40,130 +40,131 @@
           <h1 class="select-program__title">Подбор программы</h1>
           <p class="select-program__description">Заполните анкету, и мы подберем программу питания для вашего кота</p>
 
-          <form action="https://echo.htmlacademy.ru" class="cat-info" method="post">
-            <h2 class="visually-hidden"> Информация о котике.</h2>
-            <ul class="cat-info__list">
-              <li class="cat-info__item">
-                <p class="cat-info__parameter cat-info__parameter--required">Имя:*</p>
-                <label class="visually-hidden" for="name">Имя.</label>
-                <input class="cat-info__input" type="text" id="name" name="name" placeholder="Барсик" required/>
-              </li>
+          <form action="https://echo.htmlacademy.ru" class="select-program__form" method="post">
+            <fieldset class="form-info">
+              <legend class="visually-hidden"> Информация о котике.</legend>
+              <ul class="form-info__list">
+                <li class="form-info__item">
+                  <p class="form-info__parameter form-info__parameter--required">Имя:*</p>
+                  <label class="visually-hidden" for="name">Имя.</label>
+                  <input class="form-info__input" type="text" id="name" name="name" placeholder="Барсик" required/>
+                </li>
 
-              <li class="cat-info__item">
-                <p class="cat-info__parameter cat-info__parameter--required">Вес(Кг):*</p>
-                <label class="visually-hidden" for="weight">Вес.</label>
-                <input class="cat-info__input" type="number" id="weight" name="weight" placeholder="7" required/>
-              </li>
+                <li class="form-info__item">
+                  <p class="form-info__parameter form-info__parameter--required">Вес(Кг):*</p>
+                  <label class="visually-hidden" for="weight">Вес.</label>
+                  <input class="form-info__input" type="number" id="weight" name="weight" placeholder="7" required/>
+                </li>
 
-              <li class="cat-info__item">
-                <p class="cat-info__parameter">Возраст (лет):</p>
-                <label class="visually-hidden" for="age">Возраст.</label>
-                <input class="cat-info__input" type="number" id="age" name="age" placeholder="7"/>
-              </li>
-            </ul>
+                <li class="form-info__item">
+                  <p class="form-info__parameter">Возраст (лет):</p>
+                  <label class="visually-hidden" for="age">Возраст.</label>
+                  <input class="form-info__input" type="number" id="age" name="age" placeholder="7"/>
+                </li>
+              </ul>
+            </fieldset>
+
+            <fieldset class="form-radio">
+              <legend class="visually-hidden">Цель.</legend>
+              <ul class="form-radio__list">
+                <li class="form-radio__item">
+                  <label class="form-radio__control">
+                    <input class="visually-hidden" type="radio" name="goal" checked/>
+                    <span class="form-radio__control-mark"></span>
+                    <span class="form-radio__control-label">Похудение</span>
+                  </label>
+                </li>
+
+                <li class="form-radio__item">
+                  <label class="form-radio__control">
+                    <input class="visually-hidden" type="radio" name="goal"/>
+                    <span class="form-radio__control-mark"></span>
+                    <span class="form-radio__control-label">Набор массы</span>
+                  </label>
+                </li>
+
+                <li class="form-radio__item">
+                  <label class="form-radio__control">
+                    <input class="visually-hidden" type="radio" name="goal"/>
+                    <span class="form-radio__control-mark"></span>
+                    <span class="form-radio__control-label">Не знаю (Нужен ваш совет)</span>
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+
+            <fieldset class="form-cotacts">
+              <legend class="form-cotacts__title">Контактные данные (владельца кота)</legend>
+              <ul class="form-cotacts__list">
+                <li class="form-cotacts__item">
+                  <p class="form-cotacts__parameter form-cotacts__parameter--required">E-mail:*</p>
+                  <label class="visually-hidden" for="email">Электронная почта.</label>
+                  <input class="form-cotacts__input" type="email" id="email" name="email" placeholder="kuklachev@gmail.com" required/>
+                </li>
+
+                <li class="form-cotacts__item">
+                  <p class="form-cotacts__parameter form-cotacts__parameter--required">Телефон:*</p>
+                  <label class="visually-hidden" for="phone">Телефон.</label>
+                  <input class="form-cotacts__input" type="tel" id="phone" name="phone" placeholder="8 (960) 900-60-90" required/>
+                </li>
+              </ul>
+            </fieldset>
+
+            <fieldset class="form-comment">
+              <legend class="form-comment__title">Комментарий</legend>
+              <label class="visually-hidden" for="comment">Комментарий.</label>
+              <textarea class="form-comment__text-area" placeholder="Расскажите обо всех повАдках кота" id="comment" name="comment"></textarea>
+            </fieldset>
+
+            <fieldset class="form-checkbox">
+              <legend class="form-checkbox__title">Дополнительно</legend>
+
+              <ul class="form-checkbox__list">
+                <li class="form-checkbox__item">
+                  <label class="form-checkbox__control">
+                    <input class="form-checkbox__input" type="checkbox" name="sweetener" checked/>
+                    <span class="form-checkbox__product">сахарозаменитель</span>
+                  </label>
+                </li>
+
+                <li class="form-checkbox__item">
+                  <label class="form-checkbox__control">
+                    <input class="form-checkbox__input" type="checkbox" name="water"/>
+                    <span class="form-checkbox__product">питьевая вода</span>
+                  </label>
+                </li>
+
+                <li class="form-checkbox__item">
+                  <label class="form-checkbox__control">
+                    <input class="form-checkbox__input" type="checkbox" name="milk"/>
+                    <span class="form-checkbox__product">молоко</span>
+                  </label>
+                </li>
+
+                <li class="form-checkbox__item">
+                  <label class="form-checkbox__control">
+                    <input class="form-checkbox__input" type="checkbox" name="vitamins"/>
+                    <span class="form-checkbox__product">витамины</span>
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+            <button class="button--send-application button">отправить заявку</button>
+            <p class="select-program__remark">* — Обязательные поля</p>
           </form>
-
-          <form action="https://echo.htmlacademy.ru" class="goal" method="post">
-            <ul class="goal__list">
-              <li class="goal__item">
-                <label class="goal__control">
-                  <input class="visually-hidden" type="radio" name="goal" checked/>
-                  <span class="goal__control-mark"></span>
-                  <span class="goal__control-label">Похудение</span>
-                </label>
-              </li>
-
-              <li class="goal__item">
-                <label class="goal__control">
-                  <input class="visually-hidden" type="radio" name="goal"/>
-                  <span class="goal__control-mark"></span>
-                  <span class="goal__control-label">Набор массы</span>
-                </label>
-              </li>
-
-              <li class="goal__item">
-                <label class="goal__control">
-                  <input class="visually-hidden" type="radio" name="goal"/>
-                  <span class="goal__control-mark"></span>
-                  <span class="goal__control-label">Не знаю (Нужен ваш совет)</span>
-                </label>
-              </li>
-            </ul>
-          </form>
-        </div>
-      </section>
-
-      <section class="contacts-info">
-        <div class="contacts-info__wrapper">
-          <h2 class="contacts-info__title">Контактные данные (владельца кота)</h2>
-          <form action="https://echo.htmlacademy.ru" class="user-contacts" method="post">
-            <ul class="user-contacts__list">
-              <li class="user-contacts__item">
-                <p class="user-contacts__parameter user-contacts__parameter--required">E-mail:*</p>
-                <label class="visually-hidden" for="email">Электронная почта.</label>
-                <input class="user-contacts__input" type="email" id="email" name="email" placeholder="kuklachev@gmail.com" required/>
-              </li>
-
-              <li class="user-contacts__item">
-                <p class="user-contacts__parameter user-contacts__parameter--required">Телефон:*</p>
-                <label class="visually-hidden" for="phone">Телефон.</label>
-                <input class="user-contacts__input" type="tel" id="phone" name="phone" placeholder="8 (960) 900-60-90" required/>
-              </li>
-            </ul>
-          </form>
-        </div>
-      </section>
-
-      <section class="comment">
-        <div class="comment__wrapper">
-          <h2 class="comment__title">Комментарий</h2>
-          <label class="visually-hidden" for="comment">Комментарий.</label>
-          <textarea class="comment__text-area" placeholder="Расскажите обо всех повАдках кота" id="comment" name="comment"></textarea>
-        </div>
-      </section>
-
-      <section class="additionally">
-        <div class="additionally__wrapper">
-          <h2 class="additionally__title">Дополнительно</h2>
-
-          <ul class="additionally__list">
-            <li class="additionally__item">
-              <label class="additionally__control">
-                <input class="additionally__input" type="checkbox" name="sweetener" checked/>
-                <span class="additionally__product">сахарозаменитель</span>
-              </label>
-            </li>
-
-            <li class="additionally__item">
-              <label class="additionally__control">
-                <input class="additionally__input" type="checkbox" name="water"/>
-                <span class="additionally__product">питьевая вода</span>
-              </label>
-            </li>
-
-            <li class="additionally__item">
-              <label class="additionally__control">
-                <input class="additionally__input" type="checkbox" name="milk"/>
-                <span class="additionally__product">молоко</span>
-              </label>
-            </li>
-
-            <li class="additionally__item">
-              <label class="additionally__control">
-                <input class="additionally__input" type="checkbox" name="vitamins"/>
-                <span class="additionally__product">витамины</span>
-              </label>
-            </li>
-          </ul>
-
-          <button class="button--send-application button">отправить заявку</button>
-          <p class="additionally__remark">* — Обязательные поля</p>
         </div>
       </section>
     </main>
 
     <footer class="main-footer">
       <div class="main-footer__wrapper">
+        <div class="cooperation">
+          <div class="cooperation__info">
+            <h2 class="cooperation__title">приглашаем к сотрудничеству дилеров!</h2>
+            <address class="cooperation__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+          </div>
+        </div>
+
         <div class="main-footer__company company">
           <img class="company__image company-logo" src="#" width="" height="" alt="Имя компании">
         </div>
@@ -187,7 +188,7 @@
         <div class="main-footer__html-academy html-academy">
           <a class="html-academy__link" href="">HTML Academy</a>
           <a class="html-academy__logo" href="">
-            <img src="" width="" height="" alt="Логотип HTML-Academy.">
+            <img src="#" width="" height="" alt="Логотип HTML-Academy.">
           </a>
         </div>
       </div>
