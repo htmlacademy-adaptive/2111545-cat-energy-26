@@ -1,3 +1,28 @@
 .main-footer {
   background-color: @color-basic-grey;
+
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.main-footer__wrapper-link {
+  width: 281px;
+  min-height: 34px;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    width: 708px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1220px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }

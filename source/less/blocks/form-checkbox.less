@@ -1,13 +1,29 @@
 .form-checkbox__title {
-  font-family: "Oswald", "Arial", sans-serif;
+  font-family: @font-oswald;
   font-weight: 400;
   font-size: 24px;
   line-height: 26px;
   color: @color-black;
 }
 
+.form-checkbox__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 280px;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 221px 221px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 221px 221px 221px 221px;
+  }
+}
+
 .form-checkbox__product {
-  font-family: "Oswald", "Arial", sans-serif;
+  font-family: @font-oswald;
   font-weight: 400;
   font-size: 16px;
   line-height: 18px;

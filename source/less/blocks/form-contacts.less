@@ -1,17 +1,26 @@
-.form-cotacts__title {
-  font-family: "Oswald", "Arial", sans-serif;
+.form-contacts__title {
+  font-family: @font-oswald;
   font-weight: 400;
   font-size: 24px;
   line-height: 26px;
   color: @color-black;
 }
 
-.form-cotacts__list {
+.form-contacts__list {
   list-style: none;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+  }
 }
 
-.form-cotacts__parameter {
-  font-family: "Oswald", "Arial", sans-serif;
+.form-contacts__parameter {
+  font-family: @font-oswald;
   font-weight: 400;
   font-size: 16px;
   line-height: 18px;
@@ -19,8 +28,8 @@
   text-transform: uppercase;
 }
 
-.form-cotacts__input {
-  font-family: "Oswald", "Arial", sans-serif;
+.form-contacts__input {
+  font-family: @font-oswald;
   font-weight: 400;
   font-size: 16px;
   line-height: 18px;

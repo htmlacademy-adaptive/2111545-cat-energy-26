@@ -1,21 +1,67 @@
 .example {
   background-color: @color-light-grey;
 
+  box-sizing: border-box;
   margin: 0;
   padding: 20px;
   padding-top: 25px;
   padding-bottom: 40px;
+
+  @media (min-width: @tablet-width) {
+    padding: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 110px;
+    padding-bottom: 0px;
+  }
+}
+
+.example__wrapper {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 280px;
+  grid-template-areas: "description"
+                        "parametrs"
+                        "range";
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 708px;
+    grid-template-areas: "description"
+                          "parametrs"
+                          "range";
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 436px 591px;
+    grid-template-areas: "description range"
+                          "parametrs range";
+  }
+}
+
+.example__wrapper-description {
+  grid-area: description;
+}
+
+.example__parametrs {
+  grid-area: parametrs;
+}
+
+.example__range {
+  grid-area: range;
 }
 
 .example__title {
-  font-family: "Oswald", "Arial", sans-serif;
+  font-family: @font-oswald;
   font-weight: 400;
   font-size: 36px;
   line-height: 40px;
 }
 
 .example__description {
-  font-family: "Arial", sans-serif;
+  font-family: @font-arial;
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
@@ -23,17 +69,9 @@
 }
 
 .example__cost {
-  font-family: "Oswald", "Arial", sans-serif;
+  font-family: @font-oswald;
   font-weight: 400;
   font-size: 14px;
-  line-height: 20px;
-  text-transform: uppercase;
-}
-
-.range__changes {
-  font-family: "Oswald", "Arial", sans-serif;
-  font-weight: 400;
-  font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
 }

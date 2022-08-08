@@ -2,6 +2,7 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
     <link rel="stylesheet" href="css/style.css"/>
   </head>
@@ -160,13 +161,12 @@
               </dl>
               <a class="product__order-button button" href="#">Заказать</a>
             </li>
-          </ul>
 
-          <div class="catalog__more">
-            <p class="catalog__show-more">Показать еще 100500 товаров</p>
-            <p class="catalog__comment">На самом деле вкусов гораздо больше!</p>
-            <button class="catalog__button-show-all button button--additional" type="button">показать все</button>
-          </div>
+            <li class="product-list__item product">
+              <p class="catalog__show-more">Показать еще 100500 товаров</p>
+              <p class="catalog__comment">На самом деле вкусов гораздо больше!</p>
+              <button class="catalog__button-show-all button button--additional" type="button">показать все</button></li>
+          </ul>
         </div>
       </section>
 
@@ -231,34 +231,38 @@
             <h2 class="cooperation__title">приглашаем к сотрудничеству дилеров!</h2>
             <address class="cooperation__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
           </div>
+          <!-- Здесь будет карта-->
         </div>
 
-        <div class="main-footer__company company">
-          <img class="company__image company-logo" src="#" width="" height="" alt="Имя компании">
+        <div class="main-footer__wrapper-link">
+          <div class="main-footer__company company">
+            <img class="company__image company-logo" src="#" width="" height="" alt="Имя компании">
+          </div>
+
+          <div class="main-footer__social social">
+            <ul class="social__list">
+              <li class="social__item">
+                <a class="social__link social__link--vk" href="#"></a>
+              </li>
+
+              <li class="social__item">
+                <a class="social__link social__link--youtube" href="#"></a>
+              </li>
+
+              <li class="social__item">
+                <a class="social__link social__link--telegram" href="#"></a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="main-footer__html-academy html-academy">
+            <a class="html-academy__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+            <a class="html-academy__logo" href="https://htmlacademy.ru/intensive/adaptive">
+              <img src="#" width="" height="" alt="Логотип HTML-Academy.">
+            </a>
+          </div>
         </div>
 
-        <div class="main-footer__social social">
-          <ul class="social__list">
-            <li class="social__item">
-              <a class="social__link social__link--vk" href=""></a>
-            </li>
-
-            <li class="social__item">
-              <a class="social__link social__link--youtube" href="#"></a>
-            </li>
-
-            <li class="social__item">
-              <a class="social__link social__link--telegram" href="#"></a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="main-footer__html-academy html-academy">
-          <a class="html-academy__link" href="#">HTML Academy</a>
-          <a class="html-academy__logo" href="#">
-            <img src="#" width="" height="" alt="Логотип HTML-Academy.">
-          </a>
-        </div>
       </div>
     </footer>
   </body>
