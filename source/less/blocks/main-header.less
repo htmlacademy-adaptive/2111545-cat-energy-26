@@ -1,13 +1,43 @@
 .main-header {
   background-color: @color-white;
-  font-family: "Oswald", "Arial", sans-serif;
+  font-family: @font-oswald;
   font-weight: 500;
   font-size: 20px;
   line-height: 20px;
   color: @color-black;
 
+  box-sizing: border-box;
+  min-height: 64px;
   padding: 20px;
   padding-top: 10px;
   padding-bottom: 17px;
   margin: 0;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (min-width: @tablet-width) {
+  .main-header {
+    min-height: 100px;
+    padding: 30px;
+    padding-top: 42px;
+  }
+
+  .main-header__logo {
+    width: 174px;
+    height: 52px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-header {
+    padding: 110px;
+    padding-top: 53px;
+  }
+
+  .main-header__logo {
+    width: 202px;
+    height: 59px;
+  }
 }

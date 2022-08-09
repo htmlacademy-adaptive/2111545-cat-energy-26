@@ -1,13 +1,26 @@
 .functional-food {
-  background-color: @color-basic-green;
   background-image: url("../img/index-cat-background.jpg");
   background-repeat: no-repeat;
   color: @color-white;
-  font-family: "Oswald", "Arial", sans-serif;
+  font-family: @font-oswald;
 
+  box-sizing: border-box;
   padding: 20px;
   padding-top: 27px;
-  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    width: 709px;
+    min-height: 810px;
+
+    background-image: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image: url("../img/index-cat-background.jpg");
+    background-repeat: no-repeat;
+    width: 920px;
+    min-height: 499px;
+  }
 }
 
 .functional-food__title {

@@ -1,4 +1,32 @@
 .programs-food {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 110px;
+    padding-bottom: 0;
+  }
+}
+
+.programs-food__wrapper {
+  box-sizing: border-box;
   padding: 0;
   margin: 0;
+  width: 280px;
+  min-height: 552px;
+
+  @media (min-width: @tablet-width) {
+    width: 708px;
+    min-height: 774px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1220px;
+    min-height: 374px;
+  }
 }

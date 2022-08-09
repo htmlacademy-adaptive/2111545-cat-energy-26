@@ -1,9 +1,30 @@
 .catalog-edditional {
-  padding-left: 19px;
+  padding-left: 18px;
+  padding-right: 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 110px;
+  }
+}
+
+.catalog-edditional__wrapper {
+  width: 282px;
+
+  @media (min-width: @tablet-width) {
+    width: 708px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 896px;
+  }
 }
 
 .catalog-edditional__title {
-  font-family: "Oswald", "Arial", sans-serif;
+  font-family: @font-oswald;
   font-weight: 400;
   font-size: 24px;
   line-height: 24px;

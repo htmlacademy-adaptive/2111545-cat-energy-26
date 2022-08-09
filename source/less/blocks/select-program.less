@@ -2,10 +2,19 @@
   margin: 0;
   padding: 20px;
   padding-top: 27px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 70px;
+    padding-right: 65px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 110px;
+  }
 }
 
 .select-program__title {
-  font-family: "Oswald", "Arial", sans-serif;
+  font-family: @font-oswald;
   font-weight: 400;
   font-size: 36px;
   line-height: 36px;
@@ -13,12 +22,27 @@
 }
 
 .select-program__description {
-  font-family: "Oswald", "Arial", sans-serif;
+  font-family: @font-oswald;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
   color: @color-black;
   text-transform: uppercase;
+}
+
+.select-program__wrapper-info {
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+
+  @media (min-width: @tablet-width) {
+    width: 630px;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    width: 1218px;
+  }
 }
 
 .select-program__form-radio {
@@ -34,7 +58,7 @@
 }
 
 .select-program__button {
-  font-family: "Oswald", "Arial", sans-serif;
+  font-family: @font-oswald;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
@@ -43,7 +67,7 @@
 }
 
 .select-program__remark {
-  font-family: "Arial", sans-serif;
+  font-family: @font-arial;
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;

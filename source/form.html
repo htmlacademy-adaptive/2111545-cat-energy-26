@@ -2,6 +2,7 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
     <link rel="stylesheet" href="css/style.css"/>
   </head>
@@ -41,71 +42,74 @@
           <p class="select-program__description">Заполните анкету, и мы подберем программу питания для вашего кота</p>
 
           <form class="select-program__form" action="https://echo.htmlacademy.ru" method="post">
-            <fieldset class="select-program__form-info form-info">
-              <legend class="visually-hidden"> Информация о котике.</legend>
-              <ul class="form-info__list">
-                <li class="form-info__item">
-                  <p class="form-info__parameter form-info__parameter--required">Имя:*</p>
-                  <label class="visually-hidden" for="name">Имя.</label>
-                  <input class="form-info__input" type="text" id="name" name="name" placeholder="Барсик" required/>
-                </li>
 
-                <li class="form-info__item">
-                  <p class="form-info__parameter form-info__parameter--required">Вес(Кг):*</p>
-                  <label class="visually-hidden" for="weight">Вес.</label>
-                  <input class="form-info__input" type="number" id="weight" name="weight" placeholder="7" required/>
-                </li>
+            <div class="select-program__wrapper-info">
+              <fieldset class="select-program__form-info form-info">
+                <legend class="visually-hidden"> Информация о котике.</legend>
+                <ul class="form-info__list">
+                  <li class="form-info__item">
+                    <p class="form-info__parameter form-info__parameter--required">Имя:*</p>
+                    <label class="visually-hidden" for="name">Имя.</label>
+                    <input class="form-info__input" type="text" id="name" name="name" placeholder="Барсик" required/>
+                  </li>
 
-                <li class="form-info__item">
-                  <p class="form-info__parameter">Возраст (лет):</p>
-                  <label class="visually-hidden" for="age">Возраст.</label>
-                  <input class="form-info__input" type="number" id="age" name="age" placeholder="7"/>
-                </li>
-              </ul>
-            </fieldset>
+                  <li class="form-info__item">
+                    <p class="form-info__parameter form-info__parameter--required">Вес(Кг):*</p>
+                    <label class="visually-hidden" for="weight">Вес.</label>
+                    <input class="form-info__input" type="number" id="weight" name="weight" placeholder="7" required/>
+                  </li>
 
-            <fieldset class="select-program__form-radio form-radio">
-              <legend class="visually-hidden">Цель.</legend>
-              <ul class="form-radio__list">
-                <li class="form-radio__item">
-                  <label class="form-radio__control">
-                    <input class="visually-hidden" type="radio" name="goal" checked/>
-                    <span class="form-radio__control-mark"></span>
-                    <span class="form-radio__control-label">Похудение</span>
-                  </label>
-                </li>
+                  <li class="form-info__item">
+                    <p class="form-info__parameter">Возраст (лет):</p>
+                    <label class="visually-hidden" for="age">Возраст.</label>
+                    <input class="form-info__input" type="number" id="age" name="age" placeholder="7"/>
+                  </li>
+                </ul>
+              </fieldset>
 
-                <li class="form-radio__item">
-                  <label class="form-radio__control">
-                    <input class="visually-hidden" type="radio" name="goal"/>
-                    <span class="form-radio__control-mark"></span>
-                    <span class="form-radio__control-label">Набор массы</span>
-                  </label>
-                </li>
+              <fieldset class="select-program__form-radio form-radio">
+                <legend class="visually-hidden">Цель.</legend>
+                <ul class="form-radio__list">
+                  <li class="form-radio__item">
+                    <label class="form-radio__control">
+                      <input class="visually-hidden" type="radio" name="goal" checked/>
+                      <span class="form-radio__control-mark"></span>
+                      <span class="form-radio__control-label">Похудение</span>
+                    </label>
+                  </li>
 
-                <li class="form-radio__item">
-                  <label class="form-radio__control">
-                    <input class="visually-hidden" type="radio" name="goal"/>
-                    <span class="form-radio__control-mark"></span>
-                    <span class="form-radio__control-label">Не знаю (Нужен ваш совет)</span>
-                  </label>
-                </li>
-              </ul>
-            </fieldset>
+                  <li class="form-radio__item">
+                    <label class="form-radio__control">
+                      <input class="visually-hidden" type="radio" name="goal"/>
+                      <span class="form-radio__control-mark"></span>
+                      <span class="form-radio__control-label">Набор массы</span>
+                    </label>
+                  </li>
 
-            <fieldset class="select-program__form-cotacts form-cotacts">
-              <legend class="form-cotacts__title">Контактные данные (владельца кота)</legend>
-              <ul class="form-cotacts__list">
-                <li class="form-cotacts__item">
-                  <p class="form-cotacts__parameter form-cotacts__parameter--required">E-mail:*</p>
+                  <li class="form-radio__item">
+                    <label class="form-radio__control">
+                      <input class="visually-hidden" type="radio" name="goal"/>
+                      <span class="form-radio__control-mark"></span>
+                      <span class="form-radio__control-label">Не знаю (Нужен ваш совет)</span>
+                    </label>
+                  </li>
+                </ul>
+              </fieldset>
+            </div>
+
+            <fieldset class="select-program__form-contacts form-contacts">
+              <legend class="form-contacts__title">Контактные данные (владельца кота)</legend>
+              <ul class="form-contacts__list">
+                <li class="form-contacts__item">
+                  <p class="form-contacts__parameter form-contacts__parameter--required">E-mail:*</p>
                   <label class="visually-hidden" for="email">Электронная почта.</label>
-                  <input class="form-cotacts__input" type="email" id="email" name="email" placeholder="kuklachev@gmail.com" required/>
+                  <input class="form-contacts__input" type="email" id="email" name="email" placeholder="kuklachev@gmail.com" required/>
                 </li>
 
-                <li class="form-cotacts__item">
-                  <p class="form-cotacts__parameter form-cotacts__parameter--required">Телефон:*</p>
+                <li class="form-contacts__item">
+                  <p class="form-contacts__parameter form-contacts__parameter--required">Телефон:*</p>
                   <label class="visually-hidden" for="phone">Телефон.</label>
-                  <input class="form-cotacts__input" type="tel" id="phone" name="phone" placeholder="8 (960) 900-60-90" required/>
+                  <input class="form-contacts__input" type="tel" id="phone" name="phone" placeholder="8 (960) 900-60-90" required/>
                 </li>
               </ul>
             </fieldset>
@@ -164,34 +168,38 @@
             <h2 class="cooperation__title">приглашаем к сотрудничеству дилеров!</h2>
             <address class="cooperation__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
           </div>
+          <!-- Здесь будет карта-->
         </div>
 
-        <div class="main-footer__company company">
-          <img class="company__image company-logo" src="#" width="" height="" alt="Имя компании">
+        <div class="main-footer__wrapper-link">
+          <div class="main-footer__company company">
+            <img class="company__image company-logo" src="#" width="" height="" alt="Имя компании">
+          </div>
+
+          <div class="main-footer__social social">
+            <ul class="social__list">
+              <li class="social__item">
+                <a class="social__link social__link--vk" href="#"></a>
+              </li>
+
+              <li class="social__item">
+                <a class="social__link social__link--youtube" href="#"></a>
+              </li>
+
+              <li class="social__item">
+                <a class="social__link social__link--telegram" href="#"></a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="main-footer__html-academy html-academy">
+            <a class="html-academy__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+            <a class="html-academy__logo" href="https://htmlacademy.ru/intensive/adaptive">
+              <img src="#" width="" height="" alt="Логотип HTML-Academy.">
+            </a>
+          </div>
         </div>
 
-        <div class="main-footer__social social">
-          <ul class="social__list">
-            <li class="social__item">
-              <a class="social__link social__link--vk" href="#"></a>
-            </li>
-
-            <li class="social__item">
-              <a class="social__link social__link--youtube" href="#"></a>
-            </li>
-
-            <li class="social__item">
-              <a class="social__link social__link--telegram" href="#"></a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="main-footer__html-academy html-academy">
-          <a class="html-academy__link" href="#">HTML Academy</a>
-          <a class="html-academy__logo" href="#">
-            <img src="#" width="" height="" alt="Логотип HTML-Academy.">
-          </a>
-        </div>
       </div>
     </footer>
   </body>
