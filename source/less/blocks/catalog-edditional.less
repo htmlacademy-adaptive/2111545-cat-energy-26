@@ -1,6 +1,8 @@
 .catalog-edditional {
   padding-left: 18px;
   padding-right: 20px;
+  display: flex;
+  flex-direction: column;
 
   @media (min-width: @tablet-width) {
     padding: 30px;
@@ -8,18 +10,19 @@
 
   @media (min-width: @desktop-width) {
     padding: 110px;
+    flex-direction: row;
   }
 }
 
 .catalog-edditional__wrapper {
-  width: 282px;
+  min-width: 282px;
 
   @media (min-width: @tablet-width) {
-    width: 708px;
+    min-width: 708px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 896px;
+    min-width: 896px;
   }
 }
 

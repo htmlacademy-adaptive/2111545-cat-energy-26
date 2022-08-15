@@ -1,19 +1,19 @@
 .cooperation {
   background-color: @color-basic-grey;
 
-  box-sizing: border-box;
-  padding: 26px 20px;
+  width: 320px;
   margin: 0 auto;
   min-height: 112px;
 
   @media (min-width: @tablet-width) {
-    padding: 56px 70px;
+    width: 768px;
     min-height: 199px;
   }
 
   @media (min-width: @desktop-width) {
+    position: relative;
     padding: 56px 80px;
-    width: 565px;
+    min-width: 565px;
     min-height: 198px;
   }
 }
@@ -22,7 +22,32 @@
   background-color: @color-white;
 }
 
+.cooperation__info {
+  min-height: 87px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 26px 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 56px 70px;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-color: @color-white;
+    position: absolute;
+    z-index: 2;
+    left: 95px;
+    top: 91px;
+    width: 565px;
+    min-height: 198px;
+    padding: 56px 80px;
+  }
+}
+
 .cooperation__title {
+  width: 139px;
+  margin: 0;
   font-family: @font-oswald;
   font-weight: 400;
   font-size: 16px;
@@ -32,10 +57,17 @@
 }
 
 .cooperation__address {
+  width: 139px;
   font-family: @font-arial;
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
   color: @color-dark-grey;
   font-style: normal;
+}
+
+.cooperation_maps {
+  z-index: 1;
+  border: none;
+  display: block;
 }

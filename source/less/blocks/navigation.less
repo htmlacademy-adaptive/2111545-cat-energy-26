@@ -1,30 +1,111 @@
 /* Навигация */
 .navigation {
   display: block;
-}
+  width: auto;
 
-@media (min-width: @tablet-width) {
-  .navigation {
-    width: 440px;
+  @media (min-width: @tablet-width) {
+    min-width: 440px;
     min-height: 36px;
   }
-}
 
-@media (min-width: @desktop-width) {
-  .navigation {
-    width: 478px;
+  @media (min-width: @desktop-width) {
+    min-width: 478px;
     min-height: 40px;
   }
 }
 
-@media (min-width: @tablet-width) {
-  .navigation__toggle {
+.navigation--opened .navigation__toggle {
+  top: 0;
+  right: auto;
+  left: 0;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: 0;
+    width: 24px;
+    height: 2px;
+    background-color: @color-black;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:active::before,
+  &:active::after {
+    background-color: fade(@color-black, 30%);
+  }
+}
+
+.navigation--closed .navigation__toggle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background-color: @color-black;
+  box-shadow: 0 8px 0 0 @color-black, 0 16px 0 0 @color-black;
+}
+
+.navigation--closed .navigation__toggle:active::before {
+  background-color: fade(@color-black, 30%);
+  box-shadow:
+    0 8px 0 0 fade(@color-black, 30%),
+    0 16px 0 0 fade(@color-black, 30%);
+}
+
+.navigation--closed .navigation__wrapper {
+  @media (max-width: @mobile-width-only) {
     display: none;
   }
 }
 
-@media (min-width: @desktop-width) {
-  .navigation__toggle {
+/*.navigation--nojs .navigation__wrapper {
+  @media (max-width: @mobile-width-only) {
+    position: static;
+  }
+}
+
+.navigation--nojs .navigation__toggle {
+  @media (max-width: @mobile-width-only) {
     display: none;
+  }
+}*/
+
+.navigation__toggle {
+  position: relative;
+  width: 24px;
+  height: 22px;
+  border: none;
+  background-color: @color-white;
+  cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.navigation__wrapper {
+  background-color: @color-white;
+  min-width: 100%;
+
+  @media (max-width: @mobile-width-only) {
+    padding-top: 20px;
+    position: absolute;
+    top: 73px;
+    left: 0;
   }
 }

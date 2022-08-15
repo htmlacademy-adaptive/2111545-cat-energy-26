@@ -1,41 +1,44 @@
 .example {
   background-color: @color-light-grey;
 
-  box-sizing: border-box;
-  margin: 0;
   padding: 20px;
   padding-top: 25px;
   padding-bottom: 40px;
 
   @media (min-width: @tablet-width) {
-    padding: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: @color-white;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 110px;
-    padding-bottom: 0;
+    padding-left: 110px;
+    padding-right: 110px;
   }
 }
 
 .example__wrapper {
-  box-sizing: border-box;
-  margin: 0;
+  width: 320px;
+  margin: 0 auto;
   padding: 0;
   display: grid;
-  grid-template-columns: 280px;
+  grid-template-columns: 1fr;
   grid-template-areas: "description"
     "parametrs"
     "range";
 
   @media (min-width: @tablet-width) {
-    grid-template-columns: 708px;
+    width: 708px;
+    grid-template-columns: 1fr;
     grid-template-areas: "description"
       "parametrs"
       "range";
   }
 
   @media (min-width: @desktop-width) {
-    grid-template-columns: 436px 591px;
+    width: 1220px;
+    grid-template-columns: 436px 560px;
+    gap: 0 224px;
     grid-template-areas: "description range"
       "parametrs range";
   }
@@ -43,6 +46,27 @@
 
 .example__wrapper-description {
   grid-area: description;
+}
+
+.example__title {
+  font-family: @font-oswald;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 40px;
+  margin: 0;
+  margin-bottom: 40px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 63px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 146px;
+  }
 }
 
 .example__parametrs {
@@ -53,19 +77,26 @@
   grid-area: range;
 }
 
-.example__title {
-  font-family: @font-oswald;
-  font-weight: 400;
-  font-size: 36px;
-  line-height: 40px;
-}
-
 .example__description {
   font-family: @font-arial;
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
   color: @color-dark-grey;
+  margin: 0;
+  margin-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 54px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 69px;
+  }
 }
 
 .example__cost {
@@ -74,4 +105,17 @@
   font-size: 14px;
   line-height: 20px;
   text-transform: uppercase;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    width: 174px;
+    font-size: 20px;
+    text-align: right;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 327px;
+    font-size: 20px;
+    text-align: left;
+  }
 }
