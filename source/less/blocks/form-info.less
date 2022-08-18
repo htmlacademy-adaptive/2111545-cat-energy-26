@@ -1,5 +1,49 @@
+.form-info {
+  border: none;
+  border-bottom: 1px solid @color-light-grey-3;
+
+  @media (min-width: @tablet-width) {
+    border: none;
+  }
+
+  @media (min-width: @desktop-width) {
+
+  }
+}
+
 .form-info__list {
   list-style: none;
+  padding: 0;
+  margin: 0;
+  padding-bottom: 27px;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+
+  }
+}
+
+.form-info__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &:not(:last-child) {
+    margin-bottom: 11px;
+  }
+
+  @media (min-width: @tablet-width) {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+
+  }
 }
 
 .form-info__parameter {
@@ -9,13 +53,86 @@
   line-height: 18px;
   color: @color-dark-grey;
   text-transform: uppercase;
+  margin: 0;
+  margin-right: 13px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.form-info__parameter--weight {
+  min-width: 61px;
+
+  @media (min-width: @tablet-width) {
+    min-width: 75px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 75px;
+  }
+}
+
+.form-info__parameter--age {
+  min-width: 94px;
+
+  @media (min-width: @tablet-width) {
+    min-width: 116px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 116px;
+  }
+
 }
 
 .form-info__input {
+  width: 100%;
+  height: 44px;
+  padding: 0;
+  padding-top: 13px;
+  padding-left: 16px;
+  padding-bottom: 14px;
   font-family: @font-oswald;
   font-weight: 400;
   font-size: 16px;
   line-height: 18px;
   color: @color-dark-grey;
   text-transform: uppercase;
+  border: 1px solid @color-light-grey-4;
+  border-radius: 2px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-bottom: 12px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 20px;
+    line-height: 30px;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-bottom: 12px;
+  }
+
+  &:hover {
+    border: 1px solid @color-special-grey;
+  }
+
+  &:focus {
+    border: 1px solid @color-dark-grey;
+  }
+
+  &:invalid {
+    border: 1px solid #FF8282;
+  }
 }

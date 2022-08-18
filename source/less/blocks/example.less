@@ -6,14 +6,14 @@
   padding-bottom: 40px;
 
   @media (min-width: @tablet-width) {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 0;
+    padding-right: 0;
     background-color: @color-white;
   }
 
   @media (min-width: @desktop-width) {
-    padding-left: 110px;
-    padding-right: 110px;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -28,7 +28,7 @@
     "range";
 
   @media (min-width: @tablet-width) {
-    width: 708px;
+    width: 100%;
     grid-template-columns: 1fr;
     grid-template-areas: "description"
       "parametrs"
@@ -36,16 +36,27 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: 1220px;
+    width: 100%;
     grid-template-columns: 436px 560px;
-    gap: 0 224px;
+    gap: 0px 224px;
     grid-template-areas: "description range"
       "parametrs range";
+    background: linear-gradient(to bottom, @color-white 22%, @color-light-grey 22%, @color-light-grey 44%, @color-light-grey 44%);
   }
 }
 
 .example__wrapper-description {
   grid-area: description;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 110px;
+    padding-right: 110px;
+  }
 }
 
 .example__title {
@@ -60,17 +71,29 @@
     font-size: 60px;
     line-height: 60px;
     margin-bottom: 63px;
+    width: 325px;
   }
 
   @media (min-width: @desktop-width) {
     font-size: 60px;
     line-height: 60px;
     margin-bottom: 146px;
+    width: 325px;
   }
 }
 
 .example__parametrs {
   grid-area: parametrs;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 110px;
+    padding-right: 110px;
+  }
 }
 
 .example__range {
@@ -96,6 +119,7 @@
     font-size: 16px;
     line-height: 24px;
     margin-bottom: 69px;
+    width: 436px;
   }
 }
 
@@ -106,16 +130,32 @@
   line-height: 20px;
   text-transform: uppercase;
   text-align: center;
+  margin: 0;
+  width: 188px;
+  margin: 0 auto;
 
   @media (min-width: @tablet-width) {
     width: 174px;
     font-size: 20px;
     text-align: right;
+    margin: 0;
   }
 
   @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
     width: 327px;
     font-size: 20px;
     text-align: left;
+    margin: 0;
   }
+}
+
+.example__cost-description {
+  display: inline-block;
+}
+
+.example__cost-price {
+  margin: 0;
+  display: inline-block;
 }

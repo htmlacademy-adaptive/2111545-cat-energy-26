@@ -69,7 +69,7 @@
   }
 }
 
-/*.navigation--nojs .navigation__wrapper {
+.navigation--nojs .navigation__wrapper {
   @media (max-width: @mobile-width-only) {
     position: static;
   }
@@ -79,7 +79,7 @@
   @media (max-width: @mobile-width-only) {
     display: none;
   }
-}*/
+}
 
 .navigation__toggle {
   position: relative;
@@ -100,12 +100,14 @@
 
 .navigation__wrapper {
   background-color: @color-white;
-  min-width: 100%;
+  min-width: 440px;
+  min-height: 36px;
 
   @media (max-width: @mobile-width-only) {
     padding-top: 20px;
     position: absolute;
-    top: 73px;
+    top: 65px;
     left: 0;
+    z-index: 5;
   }
 }

@@ -3,4 +3,17 @@
 
   margin: 0;
   padding: 0;
+
+  @media (min-width: @tablet-width) {
+    border: 1px solid @color-special-grey;
+  }
+
+  @media (min-width: @desktop-width) {
+    border: none;
+    border-top: 1px solid @color-special-grey;
+  }
+}
+
+.edditional-list__item {
+  border-bottom: 1px solid @color-special-grey;
 }

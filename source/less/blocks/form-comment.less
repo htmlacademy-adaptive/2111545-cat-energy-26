@@ -1,9 +1,27 @@
+.form-comment {
+  border: none;
+}
+
 .form-comment__title {
   font-family: @font-oswald;
   font-weight: 400;
   font-size: 24px;
   line-height: 26px;
   color: @color-black;
+  padding: 0;
+  margin-bottom: 38px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+    margin-bottom: 76px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 36px;
+    line-height: 36px;
+    margin-bottom: 76px;
+  }
 }
 
 .form-comment__text-area {
@@ -13,4 +31,24 @@
   line-height: 18px;
   color: @color-dark-grey;
   text-transform: uppercase;
+  border: 1px solid @color-light-grey-4;
+  width: 280px;
+  min-height: 150px;
+  padding: 9px 12px 9px 15px;
+
+  @media (min-width: @tablet-width) {
+    width: 631px;
+    min-height: 174px;
+    font-size: 20px;
+    line-height: 30px;
+    padding: 10px 19px 10px 19px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1220px;
+    min-height: 174px;
+    font-size: 20px;
+    line-height: 30px;
+    padding: 10px 19px 10px 19px;
+  }
 }

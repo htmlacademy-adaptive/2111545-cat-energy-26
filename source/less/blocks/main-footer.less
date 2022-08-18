@@ -7,18 +7,20 @@
 }
 
 .main-footer__wrapper {
+  position: relative;
+
   @media (min-width: @tablet-width) {
-    width: 768px;
+    width: 100%;
     margin: 0 auto;
   }
 
   @media (min-width: @desktop-width) {
-    width: 1220px;
+    width: 100%;
   }
 }
 
 .main-footer__wrapper-link {
-  min-width: 281px;
+  width: 100%;
   min-height: 34px;
   margin: 0 auto;
   padding: 0;
@@ -26,14 +28,14 @@
   flex-direction: column;
 
   @media (min-width: @tablet-width) {
-    width: 768px;
+    width: 100%;
     flex-direction: row;
     justify-content: space-between;
     padding: 58px 30px 55px 30px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 1220px;
+    width: 100%;
     flex-direction: row;
     justify-content: space-between;
   }

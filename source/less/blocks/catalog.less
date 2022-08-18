@@ -1,24 +1,28 @@
 .catalog {
   background-color: @color-white;
 
-  box-sizing: border-box;
   padding: 20px;
-  padding-right: 28px;
+  padding-right: 20px;
   padding-top: 27px;
 
   @media (min-width: @tablet-width) {
     padding: 30px;
     padding-top: 27px;
+    padding-bottom: 0;
+    margin-bottom: 68px;
   }
 
   @media (min-width: @desktop-width) {
     padding: 110px;
     padding-top: 27px;
+    padding-bottom: 0;
+    margin-bottom: 75px;
   }
 }
 
 .catalog__wrapper {
-  min-width: 282px;
+  width: 282px;
+  margin: 0 auto;
 
   @media (min-width: @tablet-width) {
     min-width: 708px;
@@ -34,23 +38,30 @@
   font-weight: 400;
   font-size: 36px;
   line-height: 36px;
+  padding-bottom: 41px;
+  margin: 0;
+  border-bottom: 1px solid @color-light-grey-1;
+  margin-bottom: 8px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    padding-bottom: 0;
+    border-bottom: none;
+    margin-bottom: 82px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 60px;
+    line-height: 60px;
+    padding-bottom: 0;
+    border-bottom: none;
+    margin-bottom: 84px;
+  }
 }
 
 .catalog__product-list {
   margin-bottom: 36px;
-
-  display: grid;
-  grid-template-columns: minmax(282px, 1fr);
-
-  @media (min-width: @tablet-width) {
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-  }
-
-  @media (min-width: @desktop-width) {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 63px 80px;
-  }
 }
 
 .catalog__show-more {
@@ -60,14 +71,52 @@
   line-height: 20px;
   color: @color-black-2;
   text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 8px;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    width: 134px;
+    font-size: 20px;
+    line-height: 22px;
+    margin: 0 auto;
+    margin-bottom: 23px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 134px;
+    font-size: 20px;
+    line-height: 22px;
+    margin: 0 auto;
+    margin-bottom: 23px;
+  }
 }
 
 .catalog__comment {
-  font-family: @font-oswald;
+  font-family: @font-arial;
   font-weight: 400;
   font-size: 12px;
   line-height: 16px;
   color: @color-dark-grey;
+  margin: 0;
+  margin-bottom: 21px;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    width: 167px;
+    font-size: 16px;
+    line-height: 18px;
+    margin: 0 auto;
+    margin-bottom: 87px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 167px;
+    font-size: 16px;
+    line-height: 18px;
+    margin: 0 auto;
+    margin-bottom: 87px;
+  }
 }
 
 .catalog__button-show-all {
@@ -77,4 +126,6 @@
   line-height: 20px;
   color: @color-dark-grey;
   text-transform: uppercase;
+  padding: 10px;
+  width: 100%;
 }

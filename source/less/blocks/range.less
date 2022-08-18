@@ -1,6 +1,14 @@
 .range {
   /*...*/
-}
+
+  @media (min-width: @tablet-width) {
+    background: linear-gradient(to bottom, @color-white 11%, @color-light-grey 11%, @color-light-grey 22%, @color-light-grey 22%);
+  }
+
+  @media (min-width: @desktop-width) {
+    background: none;
+  }
+  }
 
 .range__changes {
   font-family: @font-oswald;
