@@ -9,32 +9,36 @@
 </head>
   <body class="page__body">
     <header class="main-header">
-      <a class="main-header__logo" href="#">
-        <img class="main-header__logo-image" src="img/mobile-logo.svg" width="33" height="38" alt="Логотип Кэт энерджи">
-      </a>
-      <a class="main-header__name-logo" href="">
-        <img class="main-header__company-image company-logo" src="img/mobile-logo-name.svg" width="101" height="18" alt="Имя компании">
-      </a>
-
-      <nav class="main-header__navigation navigation <!--navigation--opened--> navigation--closed <--navigation--nojs-->">
-        <button class="navigation__toggle">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
-
-        <div class="navigation__wrapper">
-          <ul class="navigation__list site-list">
-            <li class="site-list__item">
-              <a class="site-list__link" href="index.html">Главная</a>
-            </li>
-            <li class="site-list__item">
-              <a class="site-list__link site-list__link--current" href="#">Каталог продукции</a>
-            </li>
-            <li class="site-list__item">
-              <a class="site-list__link" href="form.html">Подбор программы</a>
-            </li>
-          </ul>
+      <div class="main-header__wrapper <!--main-header__wrapper-nojs-->">
+        <div class="main-header__wrapper-logo">
+          <a class="main-header__logo" href="#">
+            <img class="main-header__logo-image" src="img/mobile-logo.svg" width="33" height="38" alt="Логотип Кэт энерджи">
+          </a>
+          <a class="main-header__name-logo" href="">
+            <img class="main-header__company-image company-logo" src="img/mobile-logo-name.svg" width="101" height="18" alt="Имя компании">
+          </a>
         </div>
-      </nav>
+
+        <nav class="main-header__navigation navigation navigation--closed <!--navigation--nojs-->">
+          <button class="navigation__toggle">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+
+          <div class="navigation__wrapper">
+            <ul class="navigation__list site-list">
+              <li class="site-list__item">
+                <a class="site-list__link" href="index.html">Главная</a>
+              </li>
+              <li class="site-list__item">
+                <a class="site-list__link site-list__link--current" href="catalog.html">Каталог продукции</a>
+              </li>
+              <li class="site-list__item">
+                <a class="site-list__link" href="form.html">Подбор программы</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
     </header>
 
     <main class="main-container">
@@ -243,48 +247,65 @@
         </div>
       </section>
 
+      <section class="line">
+        <div class="line__catalog-edditional">
+          <h2 class="line__catalog-edditional-title">Дополнительные товары</h2>
+        </div>
+      </section>
+
       <section class="main-container__catalog-edditional catalog-edditional">
         <div class="catalog-edditional__wrapper">
-          <h2 class="catalog-edditional__title">Дополнительные товары</h2>
           <ul class="catalog-edditional__list edditional-list">
             <li class="edditional-list__item product-editional">
-              <h3 class="product-editional__name">Сахарозаменитель</h3>
-              <dl class="product-editional__detail">
-                <dt class="product-editional__volume">1 упаковка (100 г)</dt>
-                <dd class="product-editional__cost">200 Р.</dd>
-              </dl>
+              <div class="product-editional__wrapper">
 
-              <a class="product-editional__order button" href="#">Заказать</a>
+                <h3 class="product-editional__name">Сахарозаменитель</h3>
+                <dl class="product-editional__detail">
+                  <dt class="product-editional__volume">1 упаковка (100 г)</dt>
+                  <dd class="product-editional__cost">200 Р.</dd>
+                </dl>
+                <a class="product-editional__order button" href="#">Заказать</a>
+
+              </div>
             </li>
 
             <li class="edditional-list__item product-editional">
-              <h3 class="product-editional__name">питьевая вода</h3>
-              <dl class="product-editional__detail">
-                <dt class="product-editional__volume">5 литров</dt>
-                <dd class="product-editional__cost">50 Р.</dd>
-              </dl>
 
-              <a class="product-editional__order button" href="#">Заказать</a>
+              <div class="product-editional__wrapper">
+                <h3 class="product-editional__name">питьевая вода</h3>
+                <dl class="product-editional__detail">
+                  <dt class="product-editional__volume">5 литров</dt>
+                  <dd class="product-editional__cost">50 Р.</dd>
+                </dl>
+                <a class="product-editional__order button" href="#">Заказать</a>
+              </div>
+
             </li>
 
             <li class="edditional-list__item product-editional">
-              <h3 class="product-editional__name">молоко</h3>
+              <div class="product-editional__wrapper">
+                <h3 class="product-editional__name">молоко</h3>
 
-              <dl class="product-editional__detail">
-                <dt class="product-editional__volume">1 литр</dt>
-                <dd class="product-editional__cost">100 Р.</dd>
-              </dl>
-              <a class="product-editional__order button" href="#">Заказать</a>
+                <dl class="product-editional__detail">
+                  <dt class="product-editional__volume">1 литр</dt>
+                  <dd class="product-editional__cost">100 Р.</dd>
+                </dl>
+                <a class="product-editional__order button" href="#">Заказать</a>
+              </div>
+
             </li>
 
             <li class="edditional-list__item product-editional">
-              <h3 class="product-editional__name">витамины</h3>
+              <div class="product-editional__wrapper">
 
-              <dl class="product-editional__detail">
-                <dt class="product-editional__volume">1 упаковка (30 г)</dt>
-                <dd class="product-editional__cost">300 Р.</dd>
-              </dl>
-              <a class="product-editional__order button" href="#">Заказать</a>
+                <h3 class="product-editional__name">витамины</h3>
+                <dl class="product-editional__detail">
+                  <dt class="product-editional__volume">1 упаковка (30 г)</dt>
+                  <dd class="product-editional__cost">300 Р.</dd>
+                </dl>
+                <a class="product-editional__order button" href="#">Заказать</a>
+
+              </div>
             </li>
           </ul>
         </div>

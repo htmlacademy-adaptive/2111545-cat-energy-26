@@ -10,32 +10,36 @@
 
   <body class="page__body">
     <header class="main-header">
-      <a class="main-header__logo" href="#">
-        <img class="main-header__logo-image" src="img/mobile-logo.svg" width="33" height="38" alt="Логотип Кэт энерджи">
-      </a>
-      <a class="main-header__name-logo" href="">
-        <img class="main-header__company-image company-logo" src="img/mobile-logo-name.svg" width="101" height="18" alt="Имя компании">
-      </a>
-
-      <nav class="main-header__navigation navigation <!--navigation--opened--> navigation--closed <--navigation--nojs-->">
-        <button class="navigation__toggle">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
-
-        <div class="navigation__wrapper">
-          <ul class="navigation__list site-list">
-            <li class="site-list__item">
-              <a class="site-list__link site-list__link--current site-list__link--index" href="#">Главная</a>
-            </li>
-            <li class="site-list__item">
-              <a class="site-list__link site-list__link--index" href="catalog.html">Каталог продукции</a>
-            </li>
-            <li class="site-list__item">
-              <a class="site-list__link site-list__link--index" href="form.html">Подбор программы</a>
-            </li>
-          </ul>
+      <div class="main-header__wrapper <!--main-header__wrapper-nojs-->">
+        <div class="main-header__wrapper-logo">
+          <a class="main-header__logo" href="#">
+            <img class="main-header__logo-image" src="img/mobile-logo.svg" width="33" height="38" alt="Логотип Кэт энерджи">
+          </a>
+          <a class="main-header__name-logo" href="">
+            <img class="main-header__company-image company-logo" src="img/mobile-logo-name.svg" width="101" height="18" alt="Имя компании">
+          </a>
         </div>
-      </nav>
+
+        <nav class="main-header__navigation navigation navigation--closed <!--navigation--nojs-->">
+          <button class="navigation__toggle">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+
+          <div class="navigation__wrapper">
+            <ul class="navigation__list site-list">
+              <li class="site-list__item">
+                <a class="site-list__link site-list__link--current-index site-list__link--index" href="index.html">Главная</a>
+              </li>
+              <li class="site-list__item">
+                <a class="site-list__link site-list__link--index" href="catalog.html">Каталог продукции</a>
+              </li>
+              <li class="site-list__item">
+                <a class="site-list__link site-list__link--index" href="form.html">Подбор программы</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
     </header>
 
     <main class="main-container">
