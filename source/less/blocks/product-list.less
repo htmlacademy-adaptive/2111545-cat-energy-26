@@ -1,31 +1,35 @@
 .product-list {
   list-style: none;
+  border-top: 1px solid @color-light-grey-1;
 
-  margin: 0 auto;
   padding: 0;
 
-  display: grid;
-  grid-template-columns: 282px;
-
   @media (min-width: @tablet-width) {
+    display: grid;
     grid-template-columns: 324px 324px;
     gap: 60px;
+    margin: 0 auto;
+    border-top: none;
   }
 
   @media (min-width: @desktop-width) {
     grid-template-columns: repeat(4, 245px);
     gap: 63px 80px;
+    border-top: none;
   }
 }
 
 .product-list__item {
   padding-bottom: 25px;
+  border-bottom: 1px solid @color-light-grey-1;
 
   @media (min-width: @tablet-width) {
     padding-bottom: 0;
+    border-bottom: none;
   }
 
   @media (min-width: @desktop-width) {
     padding-bottom: 0;
+    border-bottom: none;
   }
 }

@@ -10,17 +10,38 @@
   color: @color-black;
   padding: 0;
   margin-bottom: 38px;
+  position: relative;
+  z-index: 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -2;
+    top: 15px;
+    left: 0;
+    background-color: @color-basic-green;
+    width: 1000%;
+    height: 2px;
+  }
 
   @media (min-width: @tablet-width) {
     font-size: 36px;
     line-height: 36px;
     margin-bottom: 76px;
+
+    &::before {
+      left: -200%;
+    }
   }
 
   @media (min-width: @desktop-width) {
     font-size: 36px;
     line-height: 36px;
     margin-bottom: 76px;
+
+    &::before {
+      left: -200%;
+    }
   }
 }
 

@@ -1,10 +1,18 @@
-.product-editional {
+.product-editional__wrapper {
   padding-top: 13px;
   padding-bottom: 19px;
   display: grid;
   grid-template-areas: "product"
     "detail"
     "button";
+  width: 282px;
+  margin: 0 auto;
+
+  border-bottom: 1px solid @color-special-grey;
+
+  &:first-child {
+    border-top: 1px solid @color-special-grey;
+  }
 
   @media (min-width: @tablet-width) {
     grid-template-areas: "product detail"
@@ -13,6 +21,7 @@
     grid-template-columns: 266px 300px;
     column-gap: 60px;
     row-gap: 25px;
+    width: 708px;
   }
 
   @media (min-width: @desktop-width) {
@@ -20,6 +29,7 @@
     grid-template-columns: 286px 288px 244px;
     column-gap: 38px;
     grid-template-areas: "product detail button";
+    width: 896px;
   }
 }
 
