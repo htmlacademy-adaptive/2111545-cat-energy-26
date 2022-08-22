@@ -1,5 +1,30 @@
+.form-radio {
+  padding-bottom: 19px;
+  border: 1px solid @color-light-grey-4;
+
+  @media (min-width: @tablet-width) {
+    padding: 25px 28px 25px 28px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 570px;
+    padding: 25px 28px 25px 28px;
+  }
+}
+
 .form-radio__list {
   list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.form-radio__item {
+  padding-left: 45px;
+  position: relative;
+
+  &:not(:last-child) {
+    margin-bottom: 12px;
+  }
 }
 
 .form-radio__control-label {
@@ -9,4 +34,14 @@
   line-height: 18px;
   color: @color-dark-grey-2;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
