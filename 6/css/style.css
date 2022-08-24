@@ -108,6 +108,7 @@
   display: flex;
   justify-content: space-between;
   width: 191px;
+  align-items: center;
 }
 @media (min-width: 768px) {
   .main-header__wrapper-logo {
@@ -156,9 +157,6 @@
     width: 100%;
     height: 100%;
   }
-}
-.main-header__name-logo {
-  padding-top: 10px;
 }
 .main-header__company-image {
   width: 101px;
@@ -379,7 +377,6 @@
   margin: 0;
 }
 .main-container__functional-food {
-  margin: 0 auto;
   margin-bottom: 20px;
 }
 .main-container__programs-food {
@@ -424,7 +421,24 @@
     margin-bottom: 86px;
   }
 }
-.functional-food {
+.functional-food::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 302px;
+  left: 0;
+  top: 66px;
+  background-color: rgba(104, 183, 56, 0.85);
+  z-index: 6;
+}
+@media (min-width: 768px) {
+  .functional-food::before {
+    width: 0;
+    height: 0;
+  }
+}
+.functional-food__wrapper {
+  margin: 0 auto;
   background-image: url("../img/index-cat-background-mobile.jpg");
   background-repeat: no-repeat;
   color: #ffffff;
@@ -433,44 +447,30 @@
   padding-top: 27px;
   width: 320px;
   position: relative;
-  z-index: 2;
-}
-.functional-food::before {
-  position: absolute;
-  content: "";
-  width: 320px;
-  height: 302px;
-  left: 0;
-  top: 0;
-  background-color: rgba(104, 183, 56, 0.85);
-  z-index: -1;
+  z-index: 5;
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
-  .functional-food {
+  .functional-food__wrapper {
     background-image: url("../img/index-cat-background-mobile@2x.jpg");
     background-size: 320px auto;
   }
 }
 @media (min-width: 768px) {
-  .functional-food {
+  .functional-food__wrapper {
     min-width: 534px;
     min-height: 810px;
     background-image: none;
     padding: 0;
   }
-  .functional-food::before {
-    width: 0;
-    height: 0;
-  }
 }
 @media (min-width: 1440px) {
-  .functional-food {
+  .functional-food__wrapper {
     background-image: none;
     min-width: 920px;
     min-height: 499px;
     padding: 0;
   }
-  .functional-food::after {
+  .functional-food__wrapper::after {
     content: url("../img/index-cat-background-desktop.jpg");
     position: absolute;
     left: 487px;
@@ -479,7 +479,7 @@
     min-height: 499px;
     z-index: -1;
   }
-  .functional-food::before {
+  .functional-food__wrapper::before {
     content: "";
     width: 720px;
     height: 694px;
@@ -491,12 +491,9 @@
   }
 }
 @media (min-width: 1440px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1440px) and (min-resolution: 2dppx) {
-  .functional-food::after {
+  .functional-food__wrapper::after {
     content: url("../img/index-cat-background-desktop@2x.jpg");
   }
-}
-.functional-food__wrapper {
-  margin: 0 auto;
 }
 .functional-food__title {
   font-weight: 400;
@@ -505,6 +502,7 @@
   margin: 0;
   margin-bottom: 25px;
   text-align: center;
+  z-index: 6;
 }
 @media (min-width: 768px) {
   .functional-food__title {
@@ -532,6 +530,7 @@
   margin: 0;
   margin-bottom: 302px;
   text-align: center;
+  z-index: 5;
 }
 @media (min-width: 768px) {
   .functional-food__slogan {
@@ -1432,7 +1431,7 @@
   }
 }
 .main-footer__wrapper-link {
-  width: 280px;
+  width: 320px;
   padding: 20px;
   min-height: 34px;
   margin: 0 auto;
@@ -1444,6 +1443,7 @@
     width: 768px;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     padding: 58px 30px 55px 30px;
   }
 }
@@ -1481,10 +1481,13 @@
   justify-content: space-between;
   align-items: center;
   padding: 26px 20px;
+  width: 320px;
+  margin: 0 auto;
 }
 @media (min-width: 768px) {
   .cooperation__info {
     padding: 56px 70px;
+    width: 768px;
   }
 }
 @media (min-width: 1440px) {
@@ -1524,14 +1527,13 @@
   display: block;
 }
 .company {
-  width: 320px;
-  margin: 0 auto;
-  padding: 96px;
   padding-top: 39px;
   padding-bottom: 32px;
+  border-bottom: 1px solid #D9D9D9;
 }
 @media (min-width: 768px) {
   .company {
+    border-bottom: none;
     padding: 0;
     margin: 0;
     width: 128px;
@@ -1544,16 +1546,14 @@
 }
 .company__image {
   margin: 0 auto;
+  display: block;
 }
 .social {
-  width: 320px;
-  margin: 0 auto;
-  padding: 94px;
-  padding-top: 20px;
-  padding-bottom: 21px;
+  border-bottom: 1px solid #D9D9D9;
 }
 @media (min-width: 768px) {
   .social {
+    border-bottom: none;
     width: 132px;
     padding: 0;
     margin: 0;
@@ -1567,8 +1567,10 @@
 .social__list {
   list-style: none;
   display: flex;
-  margin: 0;
+  justify-content: center;
+  flex-wrap: wrap;
   padding: 0;
+  align-items: center;
 }
 .social__item:not(:last-child) {
   margin-right: 24px;
@@ -1584,12 +1586,7 @@
   opacity: 0.3;
 }
 .html-academy {
-  width: 100%;
-  min-height: 34px;
-  margin: 0 auto;
-  padding: 22px;
-  padding-left: 19px;
-  padding-right: 20px;
+  padding-top: 22px;
 }
 @media (min-width: 768px) {
   .html-academy {
@@ -2861,7 +2858,6 @@
   position: relative;
   background-color: #ffffff;
   display: inline-block;
-  width: 201px;
   padding-right: 14px;
 }
 .form-contacts__title::before {
@@ -2879,7 +2875,6 @@
     font-size: 36px;
     line-height: 36px;
     margin-bottom: 76px;
-    width: 595px;
     padding-left: 39px;
     padding-right: 42px;
   }
@@ -2892,7 +2887,6 @@
     font-size: 36px;
     line-height: 36px;
     margin-bottom: 76px;
-    min-width: 595px;
     padding-left: 40px;
     padding-right: 40px;
   }
@@ -3052,7 +3046,7 @@
   margin-bottom: 38px;
   position: relative;
   background-color: #ffffff;
-  width: 143px;
+  display: inline-block;
   padding-right: 22px;
 }
 .form-comment__title::before {
@@ -3070,7 +3064,6 @@
     font-size: 36px;
     line-height: 36px;
     margin-bottom: 76px;
-    width: 259px;
     padding-right: 38px;
     padding-left: 39px;
   }
@@ -3083,7 +3076,6 @@
     font-size: 36px;
     line-height: 36px;
     margin-bottom: 76px;
-    width: 262px;
     padding-right: 40px;
     padding-left: 40px;
   }
@@ -3134,7 +3126,7 @@
   margin-bottom: 34px;
   position: relative;
   background-color: #ffffff;
-  width: 164px;
+  display: inline-block;
   padding-right: 23px;
 }
 .form-checkbox__title::before {
@@ -3152,7 +3144,6 @@
     font-size: 36px;
     line-height: 36px;
     margin-bottom: 57px;
-    width: 292px;
     padding-right: 41px;
     padding-left: 40px;
   }
@@ -3165,7 +3156,6 @@
     font-size: 36px;
     line-height: 36px;
     margin-bottom: 57px;
-    width: 292px;
     padding-right: 40px;
     padding-left: 40px;
   }
