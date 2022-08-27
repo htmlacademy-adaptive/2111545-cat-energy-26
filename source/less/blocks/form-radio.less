@@ -26,7 +26,77 @@
   position: relative;
 
   &:not(:last-child) {
-    margin-bottom: 12px;
+    margin-bottom: 18px;
+  }
+}
+
+.form-radio__control {
+  position: relative;
+}
+
+.form-radio__control-mark {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  outline: 1px @color-special-grey solid;
+  display: inline-block;
+  position: absolute;
+  left: -43px;
+  top: -7px;
+
+  @media (min-width: @tablet-width) {
+    width: 40px;
+    height: 40px;
+    left: -58px;
+    top: -18px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.form-radio__input:hover + .form-radio__control-mark {
+  outline: 1px @color-special-grey-3 solid;
+}
+
+.form-radio__input:disabled + .form-radio__control-mark {
+  opacity: 0.3;
+}
+
+.form-radio__input:disabled ~ .form-radio__control-label {
+  opacity: 0.3;
+}
+
+.form-radio__input:checked + .form-radio__control-mark {
+  &::before {
+    content: "";
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    position: absolute;
+    left: 26%;
+    top: 25%;
+    background-color: @color-basic-green;
+  }
+
+  @media (min-width: @tablet-width) {
+    &::before {
+      width: 18px;
+      height: 18px;
+      left: 27%;
+      top: 26%;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &::before {
+      width: 18px;
+      height: 18px;
+      left: 27%;
+      top: 26%;
+    }
   }
 }
 

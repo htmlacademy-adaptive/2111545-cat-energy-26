@@ -22,21 +22,22 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
 
-  &:active {
-    opacity: 0.3;
+.html-academy__link .html-academy__icon {
+  fill: @color-dark-grey-1;
+}
+
+.html-academy__link:hover {
+  .html-academy__icon {
+    fill: @color-basic-green;
   }
 }
 
-.html-academy__icon {
-  fill: @color-dark-grey-1;
+.html-academy__link:active {
+  opacity: 0.3;
 
-  &:hover {
+  .html-academy__icon {
     fill: @color-basic-green;
-  }
-
-  &:active {
-    fill: @color-basic-green;
-    opacity: 0.3;
   }
 }
