@@ -74,8 +74,10 @@
 }
 
 .form-checkbox__item {
+  position: relative;
+
   &:not(:last-child) {
-    margin-bottom: 12px;
+    margin-bottom: 25px;
   }
 
   @media (min-width: @tablet-width) {
@@ -91,6 +93,87 @@
   }
 }
 
+.form-checkbox__input:hover + .form-checkbox__control-mark {
+  outline: 1px solid @color-special-grey-3;
+}
+
+.form-checkbox__input:disabled + .form-checkbox__control-mark {
+  opacity: 0.3;
+}
+
+.form-checkbox__input:disabled ~ .form-checkbox__product {
+  opacity: 0.3;
+}
+
+.form-checkbox__input:checked + .form-checkbox__control-mark::before {
+  position: absolute;
+  background-color: @color-basic-green;
+  content: "";
+  transform: rotate(45deg);
+  top: 17px;
+  left: 5px;
+  width: 11px;
+  height: 2px;
+
+  @media (min-width: @tablet-width) {
+    top: 22px;
+    left: 5px;
+    width: 14px;
+    height: 2px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 22px;
+    left: 5px;
+    width: 14px;
+    height: 2px;
+  }
+}
+
+.form-checkbox__input:checked + .form-checkbox__control-mark::after {
+  position: absolute;
+  background-color: @color-basic-green;
+  content: "";
+  transform: rotate(-45deg);
+  top: 14px;
+  right: 2px;
+  width: 17px;
+  height: 2px;
+
+  @media (min-width: @tablet-width) {
+    top: 19px;
+    right: 4px;
+    width: 23px;
+    height: 2px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 19px;
+    right: 4px;
+    width: 23px;
+    height: 2px;
+  }
+}
+
+.form-checkbox__control-mark {
+  width: 30px;
+  height: 30px;
+  outline: 1px solid @color-special-grey-1;
+  display: inline-block;
+  position: absolute;
+  top: -5px;
+
+  @media (min-width: @tablet-width) {
+    width: 40px;
+    height: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
 .form-checkbox__product {
   font-family: @font-oswald;
   font-weight: 400;
@@ -98,14 +181,17 @@
   line-height: 18px;
   text-transform: uppercase;
   color: @color-black;
+  padding-left: 46px;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
+    padding-left: 59px;
   }
 
   @media (min-width: @desktop-width) {
     font-size: 20px;
     line-height: 30px;
+    padding-left: 59px;
   }
 }

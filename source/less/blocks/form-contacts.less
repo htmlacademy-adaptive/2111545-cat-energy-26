@@ -130,6 +130,10 @@
   }
 }
 
+.form-contacts__input-wrapper {
+  position: relative;
+}
+
 .form-contacts__input {
   font-family: @font-oswald;
   font-weight: 400;
@@ -139,7 +143,7 @@
   text-transform: uppercase;
   width: 100%;
   padding: 12px 35px 14px 15px;
-  border: 1px solid @color-special-grey;
+  border: 1px solid @color-light-grey-4;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
@@ -159,6 +163,10 @@
 
   &:focus {
     border: 1px solid @color-dark-grey;
+
+    .form-contacts__icon {
+      fill: @color-basic-green;
+    }
   }
 
   &:invalid {
@@ -166,8 +174,19 @@
   }
 }
 
+.form-contacts__input:focus-visible ~ .form-contacts__icon {
+  stroke: @color-basic-green;
+  fill: @color-basic-green;
+}
+
+.form-contacts__input:invalid ~ .form-contacts__icon {
+  stroke: @color-error;
+  fill: @color-error;
+}
+
 .form-contacts__input--email {
   width: 219px;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     width: 551px;
@@ -175,6 +194,42 @@
 
   @media (min-width: @desktop-width) {
     width: 486px;
+  }
+}
+
+.form-contacts__icon {
+  fill: @color-black;
+  stroke: @color-black;
+  position: absolute;
+}
+
+.form-contacts__icon--email {
+  left: 188px;
+  top: 15px;
+
+  @media (min-width: @tablet-width) {
+    left: 506px;
+    top: 18px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 436px;
+    top: 19px;
+  }
+}
+
+.form-contacts__icon--phone {
+  left: 173px;
+  top: 11px;
+
+  @media (min-width: @tablet-width) {
+    left: 493px;
+    top: 16px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 429px;
+    top: 15px;
   }
 }
 

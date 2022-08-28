@@ -69,13 +69,14 @@
   }
 }
 
-.navigation--nojs .navigation__wrapper {
+.main-header__wrapper-nojs .navigation .navigation__wrapper {
   @media (max-width: @mobile-width-only) {
     position: static;
+    display: block;
   }
 }
 
-.navigation--nojs .navigation__toggle {
+.main-header__wrapper-nojs .navigation .navigation__toggle {
   @media (max-width: @mobile-width-only) {
     display: none;
   }
@@ -108,7 +109,7 @@
     position: absolute;
     top: 65px;
     left: 0;
-    z-index: 5;
+    z-index: 10;
   }
 }
 
