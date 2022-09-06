@@ -29,8 +29,9 @@
   margin: 0 auto;
 
   @media (min-width: @tablet-width) {
-    padding: 56px 70px;
+    padding: 46px 70px;
     width: 768px;
+    align-items: flex-start;
   }
 
   @media (min-width: @desktop-width) {
@@ -54,6 +55,17 @@
   line-height: 20px;
   color: @color-black-2;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 26px;
+    width: 158px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 20px;
+    line-height: 26px;
+  }
 }
 
 .cooperation__address {
@@ -64,10 +76,40 @@
   line-height: 20px;
   color: @color-dark-grey;
   font-style: normal;
+
+  br {
+    display: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+    text-align: right;
+    width: 158px;
+
+    br {
+      display: inline;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 16px;
+    line-height: 20px;
+  }
 }
 
-.cooperation_maps {
+.cooperation__maps {
   z-index: 1;
   border: none;
   display: block;
+  height: 362px;
+  width: 100%;
+
+  @media (min-width: @tablet-width) {
+    height: 400px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 400px;
+  }
 }

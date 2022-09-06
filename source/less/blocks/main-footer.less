@@ -20,14 +20,13 @@
 }
 
 .main-footer__wrapper-link {
-  width: 320px;
   padding: 20px;
   min-height: 34px;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
 
   @media (min-width: @tablet-width) {
+    margin: 0 auto;
     width: 768px;
     flex-direction: row;
     justify-content: space-between;
@@ -40,5 +39,12 @@
     padding: 110px;
     flex-direction: row;
     justify-content: space-between;
+  }
+}
+
+.main-footer__html-academy {
+  @media (max-width: @mobile-width-only) {
+    margin: 0 auto;
+    width: 283px;
   }
 }
