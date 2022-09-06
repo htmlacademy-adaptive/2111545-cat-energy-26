@@ -11,13 +11,14 @@
   @media (min-width: @desktop-width) {
     min-width: 478px;
     min-height: 40px;
+    padding-right: 3px;
   }
 }
 
 .navigation--opened .navigation__toggle {
-  top: 0;
+  top: -4px;
   right: auto;
-  left: 0;
+  left: 2px;
 
   &::before,
   &::after {
@@ -107,7 +108,7 @@
 
   @media (max-width: @mobile-width-only) {
     position: absolute;
-    top: 65px;
+    top: 61px;
     left: 0;
     z-index: 10;
   }

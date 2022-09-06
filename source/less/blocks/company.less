@@ -1,6 +1,6 @@
 .company {
-  padding-top: 39px;
-  padding-bottom: 32px;
+  padding-top: 15px;
+  padding-bottom: 26px;
   border-bottom: 1px solid @color-light-grey-3;
 
   @media (min-width: @tablet-width) {
@@ -18,6 +18,11 @@
 .company__link {
   text-align: center;
   display: block;
+
+  @media (max-width: @mobile-width-only) {
+    width: 320px;
+    margin: 0 auto;
+  }
 }
 
 .company__icon {
