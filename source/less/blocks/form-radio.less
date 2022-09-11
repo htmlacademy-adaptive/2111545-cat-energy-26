@@ -1,17 +1,17 @@
 .form-radio {
-  padding-bottom: 19px;
+  padding-top: 10px;
   position: relative;
   border: none;
 
   @media (min-width: @tablet-width) {
     border: 1px solid @color-light-grey-4;
-    padding: 25px 28px 25px 28px;
+    padding: 30px 41px;
   }
 
   @media (min-width: @desktop-width) {
     border: 1px solid @color-light-grey-4;
     width: 570px;
-    padding: 25px 28px 25px 28px;
+    padding: 29px 40px;
   }
 }
 
@@ -26,7 +26,11 @@
   position: relative;
 
   &:not(:last-child) {
-    margin-bottom: 18px;
+    margin-bottom: 22px;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 23px;
+    }
   }
 }
 
@@ -41,14 +45,14 @@
   outline: 1px @color-special-grey solid;
   display: inline-block;
   position: absolute;
-  left: -43px;
-  top: -7px;
+  left: -46px;
+  top: -11px;
 
   @media (min-width: @tablet-width) {
     width: 40px;
     height: 40px;
-    left: -58px;
-    top: -18px;
+    left: -59px;
+    top: -16px;
   }
 
   @media (min-width: @desktop-width) {

@@ -1,7 +1,8 @@
 let navMain = document.querySelector('.navigation');
 let navToggle = document.querySelector('.navigation__toggle');
+let navjs = document.querySelector('.main-header__wrapper');
 
-navMain.classList.remove('navigation__toggle--nojs');
+navjs.classList.remove('main-header__wrapper-nojs');
 
 navToggle.addEventListener('click', function () {
   if (navMain.classList.contains('navigation--closed')) {

@@ -24,12 +24,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 26px 20px;
+  padding: 20px;
+  padding-top: 30px;
   width: 320px;
   margin: 0 auto;
 
   @media (min-width: @tablet-width) {
-    padding: 46px 70px;
+    padding: 59px 70px 47px;
     width: 768px;
     align-items: flex-start;
   }
@@ -38,8 +39,8 @@
     background-color: @color-white;
     position: absolute;
     z-index: 2;
-    left: 95px;
-    top: 91px;
+    left: 147px;
+    top: 95px;
     width: 565px;
     min-height: 198px;
     padding: 56px 80px;
@@ -60,11 +61,19 @@
     font-size: 20px;
     line-height: 26px;
     width: 158px;
+
+    br {
+      display: block;
+    }
   }
 
   @media (min-width: @desktop-width) {
     font-size: 20px;
     line-height: 26px;
+
+    br {
+      display: block;
+    }
   }
 }
 
@@ -86,6 +95,7 @@
     line-height: 20px;
     text-align: right;
     width: 158px;
+    padding: 0;
 
     br {
       display: inline;
@@ -95,6 +105,20 @@
   @media (min-width: @desktop-width) {
     font-size: 16px;
     line-height: 20px;
+    text-align: left;
+    padding: 0;
+
+    br {
+      display: inline;
+    }
+  }
+}
+
+.cooperation__address-city {
+  display: inline-block;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 19px;
   }
 }
 
@@ -104,12 +128,18 @@
   display: block;
   height: 362px;
   width: 100%;
+  background-image: url("../img/map-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 
   @media (min-width: @tablet-width) {
     height: 400px;
+    background-image: url("../img/map-tablet.jpg");
   }
 
   @media (min-width: @desktop-width) {
     height: 400px;
+    background-image: url("../img/map-desktop.jpg");
   }
 }

@@ -3,17 +3,19 @@
 
   padding: 20px;
   padding-top: 25px;
-  padding-bottom: 46px;
+  padding-bottom: 39px;
 
   @media (min-width: @tablet-width) {
     padding-left: 0;
     padding-right: 0;
-    background-color: @color-white;
+    padding-bottom: 100px;
+    background: linear-gradient(to bottom, @color-white 57%, @color-light-grey 22%, @color-light-grey 44%, @color-light-grey 44%);
   }
 
   @media (min-width: @desktop-width) {
     padding-left: 0;
     padding-right: 0;
+    padding-bottom: 26px;
     background: linear-gradient(to bottom, @color-white 22%, @color-light-grey 22%, @color-light-grey 44%, @color-light-grey 44%);
   }
 }
@@ -38,8 +40,10 @@
 
   @media (min-width: @desktop-width) {
     width: 100%;
-    grid-template-columns: 600px 560px;
-    gap: 0 224px;
+    padding-bottom: 0;
+    grid-template-columns: 600px 654px;
+    grid-template-rows: 306px 200px;
+    gap: 66px 156px;
     grid-template-areas: "description range"
       "parametrs range";
   }
@@ -57,7 +61,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-left: 126px;
+    padding-left: 147px;
   }
 }
 
@@ -94,8 +98,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-left: 126px;
-    padding-right: 110px;
+    padding-left: 145px;
+    padding-right: 0;
   }
 }
 
@@ -103,7 +107,7 @@
   grid-area: range;
 
   @media (min-width: @tablet-width) {
-    min-height: 686px;
+    min-height: 617px;
   }
 }
 
@@ -138,6 +142,7 @@
   text-transform: uppercase;
   width: 235px;
   padding-left: 46px;
+  margin: 0;
   margin-bottom: 19px;
 
   @media (min-width: @tablet-width) {
@@ -167,9 +172,29 @@
     padding-right: 2px;
     padding-bottom: 9px;
   }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 4px;
+  }
 }
 
 .example__cost-price {
   margin: 0;
   display: inline-block;
+}
+
+.example__thumb {
+  position: absolute;
+  left: 140px;
+  top: 109px;
+
+  @media (min-width: @tablet-width) {
+    left: 364px;
+    top: 341px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 310px;
+    top: 282px;
+  }
 }
