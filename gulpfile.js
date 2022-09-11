@@ -84,6 +84,7 @@ const svg = () =>
 const copy = (done) => {
   gulp.src([
   'source/fonts/*.{woff2,woff}',
+  'source/*.webmanifest',
   'source/*.ico',
   ], {
     base: 'source'
@@ -124,7 +125,7 @@ const reload = (done) => {
 const watcher = () => {
   gulp.watch('source/less/**/*.less', gulp.series(styles));
   gulp.watch('source/js/script.js', gulp.series(scripts));
-  gulp.watch('source/**/*.html').on('change', browser.reload);
+  gulp.watch('source/*.html', gulp.series(html, reload));
   gulp.watch('source/**/*.png').on('change', browser.reload);
   gulp.watch('source/**/*.jpg').on('change', browser.reload);
   gulp.watch('source/**/*.svg').on('change', browser.reload);

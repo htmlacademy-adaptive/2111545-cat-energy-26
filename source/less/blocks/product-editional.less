@@ -1,6 +1,6 @@
 .product-editional__wrapper {
-  padding-top: 13px;
-  padding-bottom: 19px;
+  padding-top: 12px;
+  padding-bottom: 18px;
   display: grid;
   grid-template-areas: "product"
     "detail"
@@ -17,15 +17,15 @@
   @media (min-width: @tablet-width) {
     grid-template-areas: "product detail"
       "button button";
-    padding: 26px 38px 28px 38px;
-    grid-template-columns: 266px 300px;
-    column-gap: 60px;
-    row-gap: 25px;
+    padding: 24px 35px 29px 35px;
+    grid-template-columns: 266px 284px;
+    column-gap: 85px;
+    row-gap: 20px;
     width: 708px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 15px 0 17px 0;
+    padding: 14px 0 15px 0;
     grid-template-columns: 286px 288px 244px;
     column-gap: 38px;
     grid-template-areas: "product detail button";
@@ -43,6 +43,7 @@
   margin: 0;
   margin-bottom: 13px;
   grid-area: product;
+  padding-left: 3px;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
@@ -53,6 +54,7 @@
   @media (min-width: @desktop-width) {
     font-size: 20px;
     line-height: 20px;
+    align-self: center;
   }
 }
 
@@ -65,11 +67,17 @@
   grid-area: detail;
 
   @media (min-width: @tablet-width) {
+    justify-content: flex-end;
     margin-bottom: 0;
+    margin-left: auto;
+    width: auto;
+    padding-top: 4px;
   }
 
   @media (min-width: @desktop-width) {
-    /*...*/
+    justify-content: space-between;
+    margin: 0;
+    align-items: center;
   }
 }
 
@@ -81,13 +89,21 @@
   color: @color-dark-grey;
 
   @media (min-width: @tablet-width) {
-    font-size: 20px;
+    font-size: 16px;
     line-height: 20px;
+    margin-right: 51px;
   }
 
   @media (min-width: @desktop-width) {
-    font-size: 20px;
+    font-size: 16px;
     line-height: 20px;
+    margin-right: 112px;
+  }
+}
+
+.product-editional__volume--water {
+  @media (min-width: @tablet-width) {
+    margin-right: 61px;
   }
 }
 
@@ -108,10 +124,14 @@
   @media (min-width: @desktop-width) {
     font-size: 16px;
     line-height: 20px;
+    text-align: left;
   }
 }
 
-.product-editional__order {
+.product-editional__button {
+  width: 100%;
+  padding: 10px;
+  grid-area: button;
   font-family: @font-oswald;
   font-weight: 400;
   font-size: 16px;
@@ -120,14 +140,4 @@
   text-transform: uppercase;
   text-decoration: none;
   text-align: center;
-  padding: 10px;
-  grid-area: button;
-
-  @media (min-width: @tablet-width) {
-    /*...*/
-  }
-
-  @media (min-width: @desktop-width) {
-    width: 244px;
-  }
 }

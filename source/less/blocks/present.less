@@ -20,11 +20,18 @@
     z-index: -1;
   }
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/catalog-cat-background-mobile@2x.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
   @media (min-width: @tablet-width) {
     width: 707px;
     min-height: 200px;
-    background-repeat: repeat;
     padding: 0 124px 69px 77px;
+    background-image: url("../img/catalog-cat-background-tablet.jpg");
+    background-repeat: no-repeat;
 
     &::before {
       position: absolute;
@@ -36,14 +43,27 @@
       height: 200px;
       z-index: -1;
     }
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/catalog-cat-background-tablet@2x.jpg");
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
   }
 
   @media (min-width: @desktop-width) {
     width: 245px;
     min-height: 289px;
     padding: 0 43px 42px 41px;
-    background-repeat: no-repeat;
     margin: 0;
+    background-image: url("../img/catalog-cat-background-desktop.jpg");
+    background-repeat: no-repeat;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/catalog-cat-background-desktop@2x.jpg");
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
 
     &::before {
       position: absolute;
@@ -59,29 +79,34 @@
 }
 
 .present__wrapper {
-  padding-top: 60px;
+  padding-top: 187px;
 
   @media (min-width: @tablet-width) {
-    padding-top: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    padding-top: 71px;
+    padding-left: 346px;
   }
 
   @media (min-width: @desktop-width) {
-    display: block;
+    padding-left: 0;
+    padding-top: 187px;
   }
 }
 
 .present__icon {
-  margin-bottom: 48px;
+  position: absolute;
+  top: 61px;
+  left: 102px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 0;
+    top: 56px;
+    left: 78px;
   }
 
   @media (min-width: @desktop-width) {
     margin-bottom: 46px;
+    top: 59px;
+    left: 86px;
   }
 }
 
