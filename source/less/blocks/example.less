@@ -16,7 +16,7 @@
     padding-left: 0;
     padding-right: 0;
     padding-bottom: 26px;
-    background: linear-gradient(to bottom, @color-white 22%, @color-light-grey 22%, @color-light-grey 44%, @color-light-grey 44%);
+    background: linear-gradient(to bottom, @color-white 26%, @color-light-grey 22%, @color-light-grey 44%, @color-light-grey 44%);
   }
 }
 
@@ -183,18 +183,67 @@
   display: inline-block;
 }
 
-.example__thumb {
-  position: absolute;
-  left: 140px;
-  top: 109px;
+.example__button {
+  height: 40px;
+  left: 141px;
+  top: 96px;
+  z-index: 2;
+  position: relative;
+  border-radius: 50%;
+  border: none;
+  padding: 0;
+
+  &::before {
+    z-index: -1;
+    height: 256px;
+    width: 4px;
+    border-radius: 2px;
+    content: "";
+    position: absolute;
+    top: -110px;
+    left: 47%;
+    background-color: @color-dark-grey-1;
+
+    @media (min-width: @tablet-width) {
+      top: -237px;
+      height: 512px;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: -237px;
+      height: 512px;
+      left: 39%;
+    }
+  }
 
   @media (min-width: @tablet-width) {
     left: 364px;
-    top: 341px;
+    top: 329px;
   }
 
   @media (min-width: @desktop-width) {
-    left: 310px;
-    top: 282px;
+    left: 312px;
+    top: 269px;
+  }
+
+  &:hover::before {
+    background-color: @color-basic-green;
+  }
+
+  &:active {
+    opacity: 60%;
+  }
+}
+
+.example__button:hover {
+  .example__thumb {
+    path {
+      stroke: @color-basic-green;
+      fill: @color-basic-green;
+    }
+
+    rect {
+      stroke: @color-basic-green;
+    }
   }
 }

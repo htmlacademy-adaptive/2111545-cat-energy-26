@@ -9,7 +9,15 @@
 }
 
 .main-header--form {
-  margin-bottom: 70px;
+  margin-bottom: 0;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 53px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 69px;
+  }
 }
 
 .main-header--catalog {
