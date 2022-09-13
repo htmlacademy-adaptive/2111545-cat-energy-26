@@ -82,6 +82,19 @@
   }
 }
 
+.main-header__wrapper-nojs .navigation .navigation__wrapper {
+  @media (max-width: @mobile-width-only) {
+    position: static;
+    display: block;
+  }
+}
+
+.main-header__wrapper-nojs .navigation .navigation__toggle {
+  @media (max-width: @mobile-width-only) {
+    display: none;
+  }
+}
+
 .main-header__wrapper-logo {
   display: flex;
   justify-content: space-between;
