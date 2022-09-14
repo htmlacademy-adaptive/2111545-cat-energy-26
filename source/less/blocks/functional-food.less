@@ -43,7 +43,7 @@
     &::before {
       display: block;
       content: "";
-      width: 100%;
+      width: 50%;
       height: 694px;
       position: absolute;
       left: 50%;
@@ -56,9 +56,9 @@
       display: block;
       //content: url("../img/index-cat-background-desktop.jpg");
       background-image: url("../img/index-cat-background-desktop.jpg");
-      background-size: contain;
+      background-size: cover;
       position: absolute;
-      width: 720px;
+      width: 50%;
       left: 50%;
       top: -223px;
       min-height: 694px;
@@ -67,8 +67,8 @@
 
     @media (min-resolution: 2dppx) {
       &::after {
-        content: url("../img/index-cat-background-desktop@2x.jpg");
-        background-size: contain;
+        background-image: url("../img/index-cat-background-desktop@2x.jpg");
+        background-size: cover;
       }
     }
   }

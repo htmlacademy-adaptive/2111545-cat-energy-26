@@ -89,7 +89,7 @@
 
 .navigation__wrapper {
   background-color: @color-white;
-  min-width: 440px;
+  min-width: 320px;
   min-height: 36px;
   width: 100%;
 
@@ -114,5 +114,8 @@
 }
 
 .navigation__list--index {
-  max-width: 600px;
+
+  @media (min-width: @desktop-width) {
+    max-width: 600px;
+  }
 }
