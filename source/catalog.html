@@ -2,10 +2,19 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.min.css"/>
+    <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
+    <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml"> <!-- 16×16 -->
+    <link rel="apple-touch-icon" href="img/favicons/favicon-apple.png"> <!-- 180×180 -->
+    <link rel="manifest" href="manifest.webmanifest">
+
+    <link rel="preload" href="/css/style.min.css" as="style">
+    <link rel="preload" href="/fonts/oswaldmedium.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="/fonts/oswaldregular.woff2" as="font" crossorigin="anonymous">
   </head>
+
   <body class="page__body">
     <header class="main-header main-header--catalog">
       <!-- Для реализации без script.js раскомментировать класс "main-header__wrapper-nojs" -->
@@ -402,7 +411,7 @@
                 </a>
                 <dl class="product-editional__detail">
                   <dt class="product-editional__volume product-editional__volume--water">5 литров</dt>
-                  <dd class="product-editional__cost">50 Р.</dd>
+                  <dd class="product-editional__cost product-editional__cost--one">50 Р.</dd>
                 </dl>
                 <a class="button product-editional__button">Заказать</a>
               </div>
@@ -522,7 +531,6 @@
 
       </div>
     </footer>
-
     <script src="js/script.js"></script>
   </body>
 </html>
